@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plot Graphs</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      body {
+        cursor: grab;
+      }
+      body.grabbing {
+        cursor: grabbing;
+      }
+      .eqnInput {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        display: flex;
+      }
+      .eqnInput input {
+        width: 180px;
+        height: 30px;
+
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: 16px;
+      }
+
+      .eqnInput button {
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-left: 6px;
+      }
+      #equation {
+        outline: none;
+        border: 2px solid yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="graphCanvas"></canvas>
+    <div class="eqnInput">
+      <input type="text" id="equation" value="sin(x)" />
+      <button type="button" onclick="addGraph()">PLOT</button>
+      <button type="button" onclick="popGraph()">POP</button>
+      <button type="button" onclick="clearGraphs()">CLEAR</button>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js"></script>
+  <script src="./script.js"></script>
+</html>
